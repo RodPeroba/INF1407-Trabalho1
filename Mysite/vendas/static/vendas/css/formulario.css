@@ -1,0 +1,10 @@
+.helptext {
+    color: grey;
+    font-size: 10px;
+}
+
+.formulario_cadastro th {
+    text-align: right;
+    padding-right: 10px;
+    vertical-align: top;
+}

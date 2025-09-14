@@ -5,11 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Página Inicial</title>
-    <link rel="stylesheet" href="{% static 'Vendas/css/styles.css' %}" />
-    {% include 'Vendas/header.html' %}
+    <link rel="stylesheet" href="{% static 'vendas/css/homepage.css' %}" />
+    {% include 'vendas/header.html' %}
   </head>
   <body>
-    {% include 'Vendas/topbar.html' %}
-    <h1>Bem-vindo à Página Inicial</h1>
+    {% include 'vendas/topbar.html' %}
+    <div class="container">
+      <div class="barra-superior">
+        <h1>Bem-vindo à Página Inicial</h1>
+        <p>Esta é a página inicial do sistema de vendas.</p>
+      </div>
+      <div class="coluna-esquerda">
+        <h2>Coluna Esquerda</h2>
+        <p>Conteúdo da coluna esquerda.</p>
+      </div>
+      <div class="coluna-direita">
+        <h2>Coluna Direita</h2>
+        <p>Conteúdo da coluna direita.</p>
+      </div>
+      <div class="rodape">
+        <h1>Rodapé da página</h1>
+    </div>
   </body>
 </html>
