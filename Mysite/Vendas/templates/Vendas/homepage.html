@@ -22,6 +22,23 @@
       <div class="coluna-direita">
         <h2>Coluna Direita</h2>
         <p>Conteúdo da coluna direita.</p>
+        <div class="produtos">
+    <ul>
+    {% for venda in vendas_produto %}
+        <ul>
+            <div>Produto: {{venda.nome}}</div>
+            <div>Preço: {{venda.preco}}</div>
+            <div>Descrição: {{venda.descricao}}</div>
+            <div class="botoes">
+                <a href="{% url 'vendas:comprar_produto' pk=venda.id %}" class="btn btn-success">Comprar</a>
+                <a href="{% url 'vendas:atualizar_produto' pk=venda.id %}" class="btn btn-primary">Atualizar</a>
+            <hr>
+          </ul>
+    {% empty %}
+        <li>Nenhum produto encontrado.</li>
+    {% endfor %}
+    </ul>
+</div>
       </div>
       <div class="rodape">
         <h1>Rodapé da página</h1>

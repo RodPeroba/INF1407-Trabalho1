@@ -1,4 +1,5 @@
-Atualizar requirements
-fazer metodo post do cadastro
 mudar a categoria para ser uma entre certas opções
 colocar o nome do vendedor automaticamente, mas so depois de aprender a fazer login
+ajeitar imagem no anuncio de venda
+fazer lista de itens
+embelezar o site
