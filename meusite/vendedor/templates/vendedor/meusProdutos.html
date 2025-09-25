@@ -1,0 +1,26 @@
+{% extends "main/base.html" %}
+{% block title %}Meus Produtos{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>Meus Produtos</h1>     
+        {% for produto in produtos %}
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div>Produto: {{ produto.nome }}</div>
+                    <div>Preço: R${{ produto.preco }}</div>
+                    <div>Vendedor: {{ produto.vendedor.username }}</div>
+                    <div>Descrição: {{ produto.descricao }}</div>
+                </div>
+                <div class="col">
+                    <a href="{% url 'atualizar_produto' pk=produto.id %}" class="btn btn-primary">Atualizar Produto</a>
+                </div>
+            </div>
+            <hr>
+        </div>            
+        {% empty %}
+            <p>Nenhum produto cadastrado.</p>
+        {% endfor %}
+        
+    </div>
+{% endblock %}

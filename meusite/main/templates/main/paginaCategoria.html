@@ -1,0 +1,42 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Produtos por Categoria{% endblock %}
+{% block extra_header %}
+    <link rel="stylesheet" href="{% static 'main/css/homepage.css' %}" />
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="barra-superior">
+        <h1>Produtos em {{ categoria_atual_rotulo }}</h1>
+    </div>
+    <div class="coluna-esquerda">
+        <h2>Categorias</h2>
+        <ul>
+          {% for categoria in categorias %}
+            <li><a href="{% url 'pagina_categoria' categoria=categoria.1 %}">{{ categoria.1 }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+    <div class="coluna-direita">
+        <h2>Produtos em {{ categoria_atual_rotulo }}</h2>
+        <hr>
+        <div class="produtos">
+            <ul>
+                {% for produto in produtos %}
+                    <ul>
+                        <div>Produto: {{ produto.nome }}</div>
+                        <div>Preço: R${{ produto.preco }}</div>
+                        <div>Vendedor: {{ produto.vendedor.username }}</div>
+                        <div>Descrição: {{ produto.descricao }}</div>
+                        <hr>
+                    </ul>
+                {% empty %}
+                    <li>Nenhum produto encontrado nesta categoria.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="rodape"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}Página Inicial{% endblock %}
+{% block extra_header %}
+    <link rel="stylesheet" href="{% static 'main/css/homepage.css' %}" />
+{% endblock %}
+{% block content %}
+    <div class="container">
+      <div class="barra-superior">
+        <h1>Bem-vindo à Página Inicial</h1>
+      </div>
+      <div class="coluna-esquerda">
+        <h2>Categorias</h2>
+        <ul>
+          {% for categoria in categorias %}
+            <li><a href="{% url 'pagina_categoria' categoria=categoria %}">{{ categoria }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="coluna-direita">
+        <h2>Todos os Produtos</h2>
+        <hr>
+        <div class="produtos">
+    <ul>
+    {% for venda in vendas_produto %}
+        <ul>
+            <div>Produto: {{venda.nome}}</div>
+            <div>Preço: R${{venda.preco}}</div>
+            <div>Vendedor: {{venda.vendedor.username}}</div>
+            <div>Descrição: {{venda.descricao}}</div>
+            <div class="botoes">
+                <a href="{% url 'comprador:produto_individual' pk=venda.id categoria=venda.categoria nome=venda.nome %}" class="btn btn-success">Comprar</a>
+            </div>
+            <hr>
+          </ul>
+    {% empty %}
+        <li>Nenhum produto encontrado.</li>
+    {% endfor %}
+    </ul>
+</div>
+      </div>
+      <div class="rodape"></div>
+{% endblock %}
