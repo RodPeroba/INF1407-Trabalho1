@@ -1,0 +1,19 @@
+{% extends "Mysite/base.html" %}
+{% block title %}Comprar Produto{% endblock %}
+{% block content %}
+    <div class="container">
+      <h1>Comprar Produto</h1>
+      <p>Você está prestes a comprar o seguinte produto:</p>
+      <ul>
+        <li>Nome: {{ produto.nome }}</li>
+        <li>Preço: {{ produto.preco }}</li>
+        <li>Vendedor: {{ produto.vendedor.username }}</li>
+        <li>Descrição: {{ produto.descricao }}</li>
+      </ul>
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success mt-2">Confirmar Compra</button>
+        <a href="{% url 'homepage' %}" class="btn btn-secondary mt-2">Voltar</a>
+      </form>
+    </div>
+{% endblock %}

@@ -1,5 +1,11 @@
-mudar a categoria para ser uma entre certas opções
-colocar o nome do vendedor automaticamente, mas so depois de aprender a fazer login
+AJEITAR GRUPOS DE USUARIO
+criar urls automaticamente via links
+criar grupos automaticamente
+
+
+
 ajeitar imagem no anuncio de venda
-fazer lista de itens
-embelezar o site
+quando registro da erro, n aparece nada indicando o erro
+reformatar formulario
+transformar as categorias em links
+fazer a div do produto ser clicavel e redirecionar a pag do produto
