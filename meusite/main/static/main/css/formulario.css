@@ -1,0 +1,11 @@
+.helptext {
+    color: grey;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+.formulario th {
+    text-align: right;
+    padding-right: 10px;
+    vertical-align: top;
+}

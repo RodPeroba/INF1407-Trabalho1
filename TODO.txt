@@ -1,11 +1,5 @@
-AJEITAR GRUPOS DE USUARIO
-criar urls automaticamente via links
-criar grupos automaticamente
-
-
+distribuir o código em seus devidos apps
 
 ajeitar imagem no anuncio de venda
-quando registro da erro, n aparece nada indicando o erro
-reformatar formulario
-transformar as categorias em links
+
 fazer a div do produto ser clicavel e redirecionar a pag do produto
