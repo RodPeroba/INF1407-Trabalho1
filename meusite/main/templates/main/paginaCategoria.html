@@ -29,6 +29,9 @@
                         <div>Preço: R${{ produto.preco }}</div>
                         <div>Vendedor: {{ produto.vendedor.username }}</div>
                         <div>Descrição: {{ produto.descricao }}</div>
+                        <div class="botoes">
+                            <a href="{% url 'comprador:produto_individual' pk=produto.id categoria=produto.categoria nome=produto.nome %}" class="btn btn-success">Comprar</a>
+                        </div>
                         <hr>
                     </ul>
                 {% empty %}

@@ -7,3 +7,10 @@ redirecionamento para pagina de login???
 ajeitar imagem no anuncio de venda
 
 fazer a div do produto ser clicavel e redirecionar a pag do produto
+
+
+FEEDBACK:
+
+icones no topo de tamanho igual
+foto do produto
+log de compras realizadas

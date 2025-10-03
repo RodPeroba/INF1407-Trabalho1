@@ -14,7 +14,6 @@ Na esqueda temos uma barra para selecionar as categorias dos produtos e na direi
 
 Problemas conhecidos
 
-- Todos que acessam a página podem comprar produtos, sem precisar estar logando como comprador
 - Foi implementado a recuperação de senha mas até o momento não recebi email alertando a troca, então não se sabe se esta funcionando ou não
 - Como dito acima, a publicação e compra de produtos são feitas sem fiscalização nenhuma e não há um sistema financeiro implementado
 
