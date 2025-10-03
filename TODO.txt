@@ -1,4 +1,8 @@
 distribuir o código em seus devidos apps
+restringir acesso a certas paginas dependendo do grupo do usuário
+
+redirecionamento para pagina de login???
+
 
 ajeitar imagem no anuncio de venda
 

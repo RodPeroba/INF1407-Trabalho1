@@ -1,0 +1,17 @@
+{% extends "main/base.html" %}
+<!DOCTYPE html>
+{% block title %}User Form{% endblock %} 
+{% block content %}
+<div class="container mt-4">
+  <h2>Complete seus dados</h2>
+  <div class="d-flex gap-2 mt-3">
+    <form method="post">
+      {% csrf_token %}
+      <table class="formulario">
+        {{ form.as_table }}
+      </table>
+      <button type="submit" class="btn btn-primary mt-2">Atualiza</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

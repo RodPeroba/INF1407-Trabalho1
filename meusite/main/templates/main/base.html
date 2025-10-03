@@ -18,6 +18,8 @@
     <div class="d-flex justify-content-center align-items-center gap-2">
     <a href="{% url 'homepage' %}" class="btn btn-dark">Início</a>
     {% if user.is_authenticated %}
+    <a href="{% url 'troca_senha' %}" class="btn btn-dark">Trocar Senha</a>
+    <a href="{% url 'editar_perfil_seguro' user.pk %}" class="btn btn-dark">Editar Perfil</a>
     <a href="{% url 'confirma_logout' %}" class="btn btn-dark">Logout</a>
     {% for group in user.groups.all %}
       {% if group.name == "Vendedor" %}

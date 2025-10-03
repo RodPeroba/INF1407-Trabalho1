@@ -10,6 +10,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect
 from django.contrib.auth.models import Group
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import UpdateView
 
 
 class HomePage(View):
@@ -109,3 +111,12 @@ class PaginaCategoria(View):
 
         contexto = {'produtos': produtos, 'categorias': categorias_choices, 'categoria_atual_rotulo': categoria}
         return render(request, 'main/paginaCategoria.html', contexto)
+    
+class MeuUpdateView(UpdateView):
+    def get(self, request, pk, *args, **kwargs):
+        if request.user.id == pk:
+            return super().get(request, pk, *args, **kwargs)
+        else:
+            return redirect('homepage')
+    def post(self, request, pk, *args, **kwargs):
+        return redirect('homepage')
