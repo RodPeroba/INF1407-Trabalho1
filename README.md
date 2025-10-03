@@ -16,6 +16,7 @@ Problemas conhecidos
 
 - Foi implementado a recuperação de senha mas até o momento não recebi email alertando a troca, então não se sabe se esta funcionando ou não
 - Como dito acima, a publicação e compra de produtos são feitas sem fiscalização nenhuma e não há um sistema financeiro implementado
+- Ao registrar um produto da categoria Roupa, ele aparece na página da categoria Livros
 
 URL do site:
 
