@@ -14,4 +14,4 @@ class ProdutoIndividual(View):
     def post(self, request, pk, *args, **kwargs):
         produto = Produto.objects.get(id=pk)
         produto.delete()
-        return HttpResponseRedirect(reverse_lazy('main:homepage'))
+        return HttpResponseRedirect(reverse_lazy('homepage'))
