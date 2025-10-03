@@ -19,6 +19,8 @@
           {% for group in user.groups.all %}
             {% if group.name == "Comprador" %}
               <button type="submit" class="btn btn-success mt-2">Confirmar Compra</button>
+            {% else %}
+              <p class="text-danger">Você precisa estar logado como Comprador para comprar este produto.</p>
             {% endif %}
           {% endfor %}
         {% else %}
